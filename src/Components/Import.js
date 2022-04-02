@@ -5,23 +5,24 @@ import React ,{ useState,useEffect } from 'react'
 
 
 function Import() {
-    useEffect(() => {
-        const token = localStorage.getItem('token')
-        axios.post('http://localhost:5000/authen', {
-            token
-          })
-          .then(function (response) {
+    // ปิดไว้ก่อนยัง ต้องใช้ backend
+    // useEffect(() => {
+    //     const token = localStorage.getItem('token')
+    //     axios.post('http://localhost:5000/authen', {
+    //         token
+    //       })
+    //       .then(function (response) {
               
-            console.log(response)
-            if(response.data.status != 'ok'){
-                alert('ยังไม่ได้ login')
-                window.location = '/login'
-            }
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-    })
+    //         console.log(response)
+    //         if(response.data.status != 'ok'){
+    //             alert('ยังไม่ได้ login')
+    //             window.location = '/login'
+    //         }
+    //       })
+    //       .catch(function (error) {
+    //         console.log(error);
+    //       });
+    // })
 
     const [Data,setData] = useState();
 
