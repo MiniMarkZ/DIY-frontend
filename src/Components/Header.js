@@ -2,6 +2,7 @@ import React from 'react'
 import '../Style/Header.css'
 import logo from '../Img/1_logo.png'
 import {IoSearchOutline} from 'react-icons/io5'
+
 function Header() {
   return (
   <div id="header">

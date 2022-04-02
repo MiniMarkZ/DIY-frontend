@@ -1,9 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo2 from '../Img/logo_sticky.png'
 import {RiLogoutBoxRLine} from 'react-icons/ri'
 import '../Style/Navbar.css'
 
+const Logout = ()=>{
+  if(localStorage.getItem('token')){
+    localStorage.removeItem('token');
+    alert('ออกจากระบบ')
+  }else{
+    alert('ยังไม่ได้ login นะไอตู่')
+  }
+}
 function Navbar() {
   
   return (
@@ -14,7 +21,7 @@ function Navbar() {
         <li><Link to="/">หน้าหลัก</Link></li>
         <li><Link to="#">จัดการสินค้า</Link></li>
         <li><Link to="/import">นำเข้าสินค้า</Link></li>
-        <li><Link to="#"><RiLogoutBoxRLine/> ออกจากระบบ</Link></li>
+        <li onClick={Logout}><Link to="/"><RiLogoutBoxRLine/> ออกจากระบบ</Link></li>
       </ul>
     </div>
   )
