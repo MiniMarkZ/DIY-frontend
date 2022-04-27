@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react'
 import axios from 'axios';
+import {Container} from '../Style/layoutComponent'
 
 function Manage() {
     useEffect(() => {
@@ -20,7 +21,9 @@ function Manage() {
           });
     })
   return (
-    <div>Manage</div>
+    <Container>
+      Manage
+    </Container>
   )
 }
 

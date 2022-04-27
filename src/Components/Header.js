@@ -4,8 +4,6 @@ import logo from '../Img/1_logo.png'
 import {RiLoginCircleLine} from 'react-icons/ri'
 import {Link} from 'react-router-dom'
 
-
-
 function Header() {
 
   const [status,setStatus] = useState('เข้าสู่ระบบ');

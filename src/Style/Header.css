@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
     justify-content: space-between!important;
+    list-style: none;
 }
 #logo{
     width: fit-content;
@@ -39,3 +40,15 @@
     color: white;
     background-color: #ee1c25;
 }
+
+ul li{
+    padding: 7px 10px 7px 10px;
+}
+
+ul li a{
+    display: flex;
+    text-decoration: none;
+}
+
+
+

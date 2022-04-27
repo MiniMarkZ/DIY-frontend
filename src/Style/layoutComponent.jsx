@@ -14,3 +14,12 @@ export const LoginContainer = styled.div`
     background: white;
     border-radius: 10px;
 `
+export const FooterCon = styled.footer`
+    width: 100%;
+    text-align: center;
+    background-color: #44555f;
+    color: #fff;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+`

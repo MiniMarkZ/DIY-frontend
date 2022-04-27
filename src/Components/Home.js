@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container} from '../Style/layoutElements'
+import {Container} from '../Style/layoutComponent.jsx'
 
 function Home() {
   return (

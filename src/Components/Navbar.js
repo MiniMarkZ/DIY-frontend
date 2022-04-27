@@ -1,7 +1,6 @@
 import React ,{useEffect,useState}from 'react'
-import { Link } from 'react-router-dom'
+import {NavbarCon, NavList , NavItem , NavLink , NavLinkShow} from '../Style/styledElement'
 // import {RiLogoutBoxRLine} from 'react-icons/ri'
-import '../Style/Navbar.css'
 
 // const Logout = ()=>{
 //   if(localStorage.getItem('token')){
@@ -13,28 +12,36 @@ import '../Style/Navbar.css'
 // }
 
 function Navbar() {
-  const [navList,setNavList] = useState("Navlist");
+  const [show,setShow] = useState(false);
 
   useEffect(()=>{
       if(localStorage.getItem('token')){
-        setNavList('Navlist');
+        setShow(true);
       }
       else{
-        setNavList('HideNav');
+        setShow(false);
       }
-  
   })
   return (
-    <div className= "Navbar">
-      {/* <div><img src={logo2} alt="logo2" width="60px"/></div> */}
-      <ul>
-        {/* <li><img src={logo2} alt="logo2" width="60px"/></li> */}
-        <li><Link to="/">หน้าหลัก</Link></li>
-        <li className={navList}><Link to="/import">นำเข้าสินค้า</Link></li>
-        <li className={navList}><Link to="/manage">จัดการสินค้า</Link></li>
+    <NavbarCon>
+
+      <NavList>
+
+        <NavItem>
+          <NavLink to="/">หน้าหลัก</NavLink>
+        </NavItem>
+
+        <NavItem>
+          <NavLinkShow show={show} to="/import">นำเข้าสินค้า</NavLinkShow>
+        </NavItem>
+
+        <NavItem>
+          <NavLinkShow show={show} to="/manage">จัดการสินค้า</NavLinkShow>
+        </NavItem>
+
         {/* <li onClick={Logout}><Link to="/"><RiLogoutBoxRLine/> ออกจากระบบ</Link></li> */}
-      </ul>
-    </div>
+      </NavList>
+    </NavbarCon>
   )
 }
 

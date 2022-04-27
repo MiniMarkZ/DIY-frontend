@@ -7,6 +7,7 @@ import Manage from './Components/Manage';
 import Import from './Components/Import';
 import Login from './login/Login';
 import React from 'react';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/manage" element={<Manage/>}/>
       </Routes>
+      <Footer/>
     </>
   );
 }

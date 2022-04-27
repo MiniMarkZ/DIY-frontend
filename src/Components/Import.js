@@ -1,9 +1,7 @@
-import '../Style/Page.css';
+import React ,{ useState,useEffect } from 'react'
 import axios from 'axios';
 import Papa from 'papaparse';
-import React ,{ useState,useEffect } from 'react'
-
-
+import {Container} from '../Style/layoutComponent'
 
 function Import() {
 
@@ -49,7 +47,7 @@ function Import() {
     }
 
 return (
-    <div>
+    <Container>
         <div>
             <div className='page'>
                 <h1>Import</h1>
@@ -63,7 +61,7 @@ return (
                 </form>
             </div>
         </div>
-    </div>
+    </Container>
 );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import { Form, Input, Button} from 'antd';
-import { LoginContainer} from '../Style/layoutElements';
+import { LoginContainer} from '../Style/layoutComponent.jsx';
 
 
 const Login = () => {
