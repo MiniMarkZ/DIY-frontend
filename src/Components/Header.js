@@ -1,27 +1,48 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react'
 import '../Style/Header.css'
 import logo from '../Img/1_logo.png'
-import {IoSearchOutline} from 'react-icons/io5'
+import {RiLoginCircleLine} from 'react-icons/ri'
+import {Link} from 'react-router-dom'
+
+
 
 function Header() {
+
+  const [status,setStatus] = useState('เข้าสู่ระบบ');
+  
+  useEffect(()=>{
+      if(localStorage.getItem('token')){
+        setStatus('ออกจากระบบ');
+      }
+  })
+
+  const Logout = ()=>{
+    if(localStorage.getItem('token')){
+      localStorage.removeItem('token');
+      alert('ออกจากระบบ')
+      setStatus("เข้าสู่ระบบ")
+      window.location="/login"
+    }
+  }
+
   return (
   <div id="header">
     <div id="wrapper">
       <ul id="container">
         <li>
           <div id="logo">
-            <a href='https://www.mrdiy.com/th/' target='_blank' rel='noreferrer'>
-              <img src={logo} alt="logo" width="195px" height="60px"/>
-            </a>
+            <Link to='/'>
+              <img src={logo} alt="logo" width="195px" height="60px" style={{textAlign:"center"}}/>
+            </Link>
           </div>
         </li>
         <li id="sideBorder">
-          <a href="#" id='link' style={{marginTop:"0"}}>
+          <Link to="/login" id='link' style={{marginTop:"0"}} onClick={Logout}>
             <div style={{marginTop:"0" , marginBottom:"0"}}>
-              <div style={{marginBottom:"0.5rem"}}><IoSearchOutline style={{fontSize:"30px"}}/></div>
-              <div>คำค้นหา</div>
+              <div ><RiLoginCircleLine style={{fontSize:"30px"}}/></div>
+              <div>{status}</div>
             </div>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

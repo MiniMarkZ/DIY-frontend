@@ -1,10 +1,12 @@
 import React from 'react'
+import {Container} from '../Style/layoutElements'
 
 function Home() {
   return (
-    <div>
-        <h1>Home</h1>
-    </div>
+    <Container>
+        <h1>แผนผังของร้าน</h1>
+        
+    </Container>
   )
 }
 
