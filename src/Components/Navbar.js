@@ -30,8 +30,8 @@ function Navbar() {
       <ul>
         {/* <li><img src={logo2} alt="logo2" width="60px"/></li> */}
         <li><Link to="/">หน้าหลัก</Link></li>
-        <li className={navList}><Link to="#">จัดการสินค้า</Link></li>
         <li className={navList}><Link to="/import">นำเข้าสินค้า</Link></li>
+        <li className={navList}><Link to="/manage">จัดการสินค้า</Link></li>
         {/* <li onClick={Logout}><Link to="/"><RiLogoutBoxRLine/> ออกจากระบบ</Link></li> */}
       </ul>
     </div>
