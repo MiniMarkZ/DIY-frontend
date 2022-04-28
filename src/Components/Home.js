@@ -5,7 +5,6 @@ function Home() {
   return (
     <Container>
         <h1>แผนผังของร้าน</h1>
-        
     </Container>
   )
 }

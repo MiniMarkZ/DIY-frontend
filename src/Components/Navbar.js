@@ -32,6 +32,10 @@ function Navbar() {
         </NavItem>
 
         <NavItem>
+          <NavLink to="/about">เกี่ยวกับเรา</NavLink>
+        </NavItem>
+
+        <NavItem>
           <NavLinkShow show={show} to="/import">นำเข้าสินค้า</NavLinkShow>
         </NavItem>
 

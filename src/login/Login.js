@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import { Form, Input, Button} from 'antd';
@@ -6,6 +6,13 @@ import { LoginContainer} from '../style/layoutComponent.jsx';
 
 
 const Login = () => {
+
+  useEffect(()=>{
+    if(localStorage.getItem('token')){
+      alert('คุณได้เข้าสู่ระบบแล้ว')
+      window.location="/"
+    }
+})
 
   const onFinish = (values) => {
     console.log('Success:', values);

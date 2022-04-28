@@ -7,7 +7,6 @@ export const NavbarCon = styled.div`
     position: sticky;
     top: 0;
     font-family: 'Kanit', sans-serif;
-    font-weight: 300;
     font-size: .875rem ;
     font-weight: 500;
 `

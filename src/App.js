@@ -8,6 +8,7 @@ import Import from './components/Import';
 import Login from './login/Login';
 import React from 'react';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/import" element={<Import/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/manage" element={<Manage/>}/>
+        <Route path="/about" element={<About/>}/>
       </Routes>
       <Footer/>
     </>

@@ -50,7 +50,7 @@ return (
     <Container>
         <div>
             <div className='page'>
-                <h1>Import</h1>
+                <h1>นำเข้าสินค้า</h1>
                 <form>
                     <input
                         className='Input'
