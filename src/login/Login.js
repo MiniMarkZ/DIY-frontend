@@ -40,6 +40,7 @@ const Login = () => {
   };
 
   return (
+    <div style={{background:"#ebecee", minHeight:"85vh"}}>
     <LoginContainer>
       <div style={{textAlign:"center"}}>
         <h2 style={{borderBottom:"2px solid #ffc526",fontFamily:"'Kanit', sans-serif",fontWeight:"500"}}>เข้าสู่ระบบ</h2>
@@ -98,6 +99,7 @@ const Login = () => {
         </Form.Item>
       </Form >
     </LoginContainer>
+    </div>
   );
 };
 export default Login
