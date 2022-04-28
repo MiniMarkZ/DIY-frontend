@@ -1,7 +1,7 @@
 import React ,{ useState,useEffect } from 'react'
 import axios from 'axios';
 import Papa from 'papaparse';
-import {Container} from '../Style/layoutComponent'
+import {Container} from '../style/layoutComponent'
 
 function Import() {
 

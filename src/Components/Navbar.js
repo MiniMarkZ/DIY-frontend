@@ -1,5 +1,5 @@
 import React ,{useEffect,useState}from 'react'
-import {NavbarCon, NavList , NavItem , NavLink , NavLinkShow} from '../Style/styledElement'
+import {NavbarCon, NavList , NavItem , NavLink , NavLinkShow} from '../style/styledElement'
 // import {RiLogoutBoxRLine} from 'react-icons/ri'
 
 // const Logout = ()=>{

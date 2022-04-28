@@ -1,5 +1,5 @@
 import React, {useEffect,useState} from 'react'
-import '../Style/Header.css'
+import '../style/Header.css'
 import logo from '../Img/1_logo.png'
 import {RiLoginCircleLine} from 'react-icons/ri'
 import {Link} from 'react-router-dom'

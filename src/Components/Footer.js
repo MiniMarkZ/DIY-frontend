@@ -1,5 +1,5 @@
 import React from 'react'
-import {FooterCon} from '../Style/layoutComponent.jsx'
+import {FooterCon} from '../style/layoutComponent.jsx'
 
 function Footer() {
   return (

@@ -1,13 +1,13 @@
 import {  Routes, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import Navbar from './Components/Navbar';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
 import './App.css';
-import Home from './Components/Home';
-import Manage from './Components/Manage';
-import Import from './Components/Import';
+import Home from './components/Home';
+import Manage from './components/Manage';
+import Import from './components/Import';
 import Login from './login/Login';
 import React from 'react';
-import Footer from './Components/Footer';
+import Footer from './components/Footer';
 
 function App() {
   return (
