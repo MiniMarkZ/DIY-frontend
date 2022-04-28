@@ -1,11 +1,14 @@
 import React from 'react'
 import {Container} from '../style/layoutComponent.jsx'
+import AnimatedPage from './AnimatedPage.js'
 
 function Home() {
   return (
-    <Container>
-        <h1>แผนผังของร้าน</h1>
-    </Container>
+    <AnimatedPage>
+      <Container>
+          <h1>แผนผังของร้าน</h1>
+      </Container>
+    </AnimatedPage>
   )
 }
 

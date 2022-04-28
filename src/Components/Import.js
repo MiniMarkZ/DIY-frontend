@@ -2,6 +2,7 @@ import React ,{ useState,useEffect } from 'react'
 import axios from 'axios';
 import Papa from 'papaparse';
 import {Container} from '../style/layoutComponent'
+import AnimatedPage from './AnimatedPage';
 
 function Import() {
 
@@ -47,21 +48,23 @@ function Import() {
     }
 
 return (
-    <Container>
-        <div>
-            <div className='page'>
-                <h1>นำเข้าสินค้า</h1>
-                <form>
-                    <input
-                        className='Input'
-                        type={"file"}
-                        accept={".csv"}
-                        onChange={e=>{parseFile(e.target.files[0])}}
-                    />
-                </form>
+    <AnimatedPage>
+        <Container>
+            <div>
+                <div className='page'>
+                    <h1>นำเข้าสินค้า</h1>
+                    <form>
+                        <input
+                            className='Input'
+                            type={"file"}
+                            accept={".csv"}
+                            onChange={e=>{parseFile(e.target.files[0])}}
+                        />
+                    </form>
+                </div>
             </div>
-        </div>
-    </Container>
+        </Container>
+    </AnimatedPage>
 );
 }
 

@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 import {Container} from '../style/layoutComponent'
+import AnimatedPage from './AnimatedPage.js'
 
 function Manage() {
   
@@ -22,9 +23,11 @@ function Manage() {
           });
     })
   return (
-    <Container>
-      <h1>จัดการสินค้า</h1>
-    </Container>
+    <AnimatedPage>
+      <Container>
+        <h1>จัดการสินค้า</h1>
+      </Container>
+    </AnimatedPage>
   )
 }
 

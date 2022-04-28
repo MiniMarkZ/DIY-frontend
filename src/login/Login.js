@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'antd/dist/antd.css';
 import { Form, Input, Button} from 'antd';
 import { LoginContainer} from '../style/layoutComponent.jsx';
-
+import AnimatedPage from '../components/AnimatedPage.js';
 
 const Login = () => {
 
@@ -40,66 +40,68 @@ const Login = () => {
   };
 
   return (
-    <div style={{background:"#ebecee", minHeight:"85vh"}}>
-    <LoginContainer>
-      <div style={{textAlign:"center"}}>
-        <h2 style={{borderBottom:"2px solid #ffc526",fontFamily:"'Kanit', sans-serif",fontWeight:"500"}}>เข้าสู่ระบบ</h2>
-      </div>
-      <Form 
-        style={{padding:"30px 100px 0 0"}}
-        name="basic"
-        labelCol={{
-          span: 8,
-        }}
-        wrapperCol={{
-          span: 16,
-        }}
-        initialValues={{
-          remember: true,
-        }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        
-      >
-        <Form.Item
-          label="ID"
-          name="id"
-          rules={[
-            {
-              required: true,
-              message: 'Please input your id!',
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
+    <AnimatedPage>
+      <div style={{background:"#ebecee", minHeight:"85vh"}}>
+        <LoginContainer>
+          <div style={{textAlign:"center"}}>
+            <h2 style={{borderBottom:"2px solid #ffc526",fontFamily:"'Kanit', sans-serif",fontWeight:"500"}}>เข้าสู่ระบบ</h2>
+          </div>
+          <Form 
+            style={{padding:"30px 100px 0 0"}}
+            name="basic"
+            labelCol={{
+              span: 8,
+            }}
+            wrapperCol={{
+              span: 16,
+            }}
+            initialValues={{
+              remember: true,
+            }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            autoComplete="off"
+            
+          >
+            <Form.Item
+              label="ID"
+              name="id"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please input your id!',
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
 
-        <Form.Item
-          label="Password"
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: 'Please input your password!',
-            },
-          ]}
-        >
-          <Input.Password />
-        </Form.Item>
-        <Form.Item
-          wrapperCol={{
-            offset: 8,
-            span: 16,
-          }}
-        >
-          <Button type="primary" htmlType="submit">
-            เข้าสู่ระบบ
-          </Button>
-        </Form.Item>
-      </Form >
-    </LoginContainer>
-    </div>
+            <Form.Item
+              label="Password"
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please input your password!',
+                },
+              ]}
+            >
+              <Input.Password />
+            </Form.Item>
+            <Form.Item
+              wrapperCol={{
+                offset: 8,
+                span: 16,
+              }}
+            >
+              <Button type="primary" htmlType="submit">
+                เข้าสู่ระบบ
+              </Button>
+            </Form.Item>
+          </Form >
+        </LoginContainer>
+      </div>
+    </AnimatedPage>
   );
 };
 export default Login
